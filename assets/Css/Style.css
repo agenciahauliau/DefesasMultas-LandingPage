@@ -814,7 +814,177 @@ footer > *:last-child {
   border-bottom: none;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 650px) {
+  header nav {
+    max-width: 1520px;
+    margin: auto;
+  }
+  header nav .logo svg {
+    width: 175px;
+  }
+  header nav .menu .chaveMenu,
+  header nav .menu .iconeMenu {
+    display: none;
+  }
+  header nav .menu .chaveMenu ~ .itensMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .menu .itensMenu {
+    position: relative;
+  }
+  header nav .menu .itensMenu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header nav .menu .itensMenu ul li {
+    text-align: center;
+    margin: 12px;
+    margin-right: 24px;
+  }
+  header nav .menu .itensMenu ul li a {
+    font-size: 1em;
+  }
+  section.a .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.a .texto {
+    width: 50%;
+  }
+  section.a .slide {
+    width: 60%;
+    margin-right: -10%;
+  }
+  section.a .slide .aSlide {
+    height: 100%;
+  }
+  section.a .slide .aSlide .slider > * {
+    height: 342px;
+  }
+  section.b .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.b .servicos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section.b .servicos .itens {
+    max-width: 190px;
+    min-height: 288px;
+    margin: 10px;
+  }
+  section.b .servicos .carro {
+    max-width: 304px;
+    width: 100%;
+    margin-top: -38px;
+    margin-left: -48px;
+    margin-right: -48px;
+  }
+  section.b .servicos .carro .imagem {
+    width: 100%;
+  }
+  section.c .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.c .container .titulo {
+    width: 50%;
+  }
+  section.c .container .texto {
+    width: 50%;
+    padding: 48px;
+  }
+  section.d .titulo {
+    margin: 24px 0 48px;
+  }
+  section.d .processo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section.d .processo .items {
+    width: calc(100% / 3);
+    max-width: 266px;
+    margin: 12px;
+  }
+  section.e .container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  section.e .imagem {
+    display: none;
+  }
+  section.e .formulario {
+    padding-left: 38px;
+  }
+  section.f {
+    padding: 38px;
+  }
+  section.f .texto {
+    padding-right: 38px;
+  }
+  section.f .imagem .caixaImagem {
+    width: 100%;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 24px;
+  }
+  footer > * {
+    width: calc(100% / 3);
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: none;
+  }
+  footer > *:last-child {
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid #fff;
+  }
+}
+
+@media screen and (min-width: 820px) {
   header nav {
     max-width: 1520px;
     margin: auto;
@@ -927,9 +1097,6 @@ footer > *:last-child {
     max-width: 304px;
     margin: 24px;
   }
-  section.e {
-    margin-top: 76px;
-  }
   section.e .container {
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -937,14 +1104,15 @@ footer > *:last-child {
   }
   section.e .imagem {
     display: block;
-    margin-left: -114px;
+    margin-left: -76px;
     width: 50%;
     height: 100%;
     position: relative;
   }
   section.e .imagem .caixaImagem {
+    height: 722px;
     position: absolute;
-    bottom: -28px;
+    bottom: -24px;
   }
   section.e .formulario {
     padding-left: 38px;

@@ -687,7 +687,168 @@ footer {
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 650px) {
+  header {
+    nav {
+      max-width: 1520px;
+      margin: auto;
+
+      .logo {
+        svg {
+          width: 175px;
+        }
+      }
+
+      .menu {
+        .chaveMenu,
+        .iconeMenu {
+          display: none;
+        }
+
+        .chaveMenu ~ .itensMenu {
+          display: flex;
+        }
+  
+        .itensMenu {
+          position: relative;
+          ul {
+            flex-direction: row;
+            li {
+              text-align: center;
+              margin:12px;
+              margin-right: 24px;
+              a {
+                font-size: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  section.a {
+    .container {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    .texto {
+      width: 50%;
+    }
+    .slide {
+      width: 60%;
+      margin-right: -10%;
+      .aSlide {
+        height: 100%;
+        .slider {
+          & > * {
+            height: 342px;
+          }
+        }
+      }
+    }
+  } 
+  section.b {
+    .container {
+      justify-content: center;
+    }
+    .servicos {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .itens {
+        max-width: 190px;
+        min-height: 288px;
+        margin: 10px;
+      }
+
+      .carro {
+        max-width: 304px;
+        width: 100%;
+        margin-top: -38px;
+        margin-left: -48px;
+        margin-right: -48px;
+        .imagem {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+ 
+  section.c {
+    .container {
+      flex-direction: row;
+      align-items: center;
+
+      .titulo {
+        width: 50%;
+      }
+      .texto {
+        width: 50%;
+        padding: 48px;
+      }
+    }
+  }
+  section.d {
+    .titulo {
+      margin: 24px 0 48px;
+    }
+    .processo {
+      flex-direction: row;
+      .items {
+        width: calc(100% / 3);
+        max-width: 266px;
+        margin: 12px;
+      }
+    }
+  }
+  section.e {
+    .container {
+      align-items: flex-end;
+    }
+    .imagem {
+      display: none;
+    }
+    .formulario {
+      padding-left: 38px;
+    }
+  }
+  section.f {
+    padding:  38px;
+    .texto {
+      padding-right: 38px;
+    }
+    .imagem {
+      .caixaImagem {
+        width: 100%;
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+
+    > * {
+      width: calc(100% / 3);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: none;
+    }
+
+    > *:last-child {
+      width: 100%;
+      padding-top: 12px;
+      border-top: 1px solid #fff;
+    }
+  }
+}
+
+@media screen and (min-width: 820px) {
   header {
     nav {
       max-width: 1520px;
@@ -800,19 +961,19 @@ footer {
     }
   }
   section.e {
-    margin-top: 76px;
     .container {
       align-items: flex-end;
     }
     .imagem {
       display: block;
-      margin-left: -114px;
+      margin-left: -76px;
       width: 50%;
       height: 100%;
       position: relative;
       .caixaImagem {
+        height: 722px;
         position: absolute;
-        bottom: -28px;
+        bottom: -24px;
       }
     }
     .formulario {
