@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+header {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+  -webkit-transition: 0.2 ease;
+  transition: 0.2 ease;
+}
+
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,10 +22,12 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 24px;
 }
 
 header nav .logo svg {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   width: 100px;
 }
 
@@ -209,12 +223,28 @@ header nav .menu .itensMenu ul li a {
   font-weight: 100;
 }
 
+header.topoPequeno {
+  -webkit-transition: 0.2 ease;
+  transition: 0.2 ease;
+  background: #fffd;
+}
+
+header.topoPequeno nav {
+  padding: 6px;
+}
+
+header.topoPequeno nav .logo svg {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  width: 75px;
+}
+
 section {
   padding: 24px 12px;
 }
 
 section.a {
-  padding-top: 12px;
+  padding-top: 152px;
 }
 
 section.a .container {
@@ -252,7 +282,7 @@ section.a .texto h1:before {
   width: 50px;
   height: 50px;
   position: absolute;
-  bottom: -15px;
+  bottom: -50px;
   right: -10px;
   z-index: 1;
   border: 5px solid #ff0800;
@@ -371,95 +401,32 @@ section.a .slide .aSlide .bullets {
   text-align: center;
 }
 
-section.a .slide .aSlide .bullets > a {
+section.a .slide .aSlide .bullets div.dot {
   display: inline-block;
-  width: 30px;
+  width: 24px;
   height: 10px;
   line-height: 30px;
   text-decoration: none;
   text-align: center;
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-section.a .slide .aSlide .bullets > a + a {
-  background: rgba(255, 255, 255, 0.5);
+section.a .slide .aSlide .bullets div.dot.active {
+  width: 48px;
+  background: #fff;
+  -webkit-transition: 0.5 ease;
+  transition: 0.5 ease;
 }
 
-section.a .slide .aSlide .bullets > a:hover {
+section.a .slide .aSlide .bullets div.dot:hover {
   background: rgba(255, 255, 255, 0.7) !important;
 }
 
-section.a .slide .aSlide > s:target ~ .bullets > * {
-  background: white;
-}
-
-section.a .slide .aSlide > s:target ~ .prevNext > * {
-  visibility: hidden;
-}
-
-section.a .slide .aSlide a {
+section.a .slide .aSlide div.dot {
   border-radius: 10px;
-  margin: 0 3px;
-  color: rgba(0, 0, 0, 0.8);
-  text-decoration: none;
-}
-
-section.a .slide #s1:target ~ .bullets > *:nth-child(1) {
-  width: 50px;
-  background: white;
-}
-
-section.a .slide #s1:target ~ .prevNext > *:nth-child(1) {
-  visibility: visible;
-}
-
-section.a .slide #s1:target ~ .slider {
-  transform: translateX(0%);
-  -webkit-transform: translateX(0%);
-}
-
-section.a .slide #s2:target ~ .bullets > *:nth-child(2) {
-  width: 50px;
-  background: white;
-}
-
-section.a .slide #s2:target ~ .prevNext > *:nth-child(2) {
-  visibility: visible;
-}
-
-section.a .slide #s2:target ~ .slider {
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-}
-
-section.a .slide #s3:target ~ .bullets > *:nth-child(3) {
-  width: 50px;
-  background: white;
-}
-
-section.a .slide #s3:target ~ .prevNext > *:nth-child(3) {
-  visibility: visible;
-}
-
-section.a .slide #s3:target ~ .slider {
-  transform: translateX(-200%);
-  -webkit-transform: translateX(-200%);
-}
-
-section.a .slide #s4:target ~ .bullets > *:nth-child(4) {
-  width: 50px;
-  background: white;
-}
-
-section.a .slide #s4:target ~ .prevNext > *:nth-child(4) {
-  visibility: visible;
-}
-
-section.a .slide #s4:target ~ .slider {
-  transform: translateX(-300%);
-  -webkit-transform: translateX(-300%);
+  margin: 0 6px;
 }
 
 section.b {
@@ -848,6 +815,12 @@ footer > *:last-child {
   header nav .menu .itensMenu ul li a {
     font-size: 1em;
   }
+  header.topoPequeno nav .logo svg {
+    width: 125px;
+  }
+  header.topoPequeno nav .itensMenu {
+    background: none;
+  }
   section.a .container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -862,7 +835,6 @@ footer > *:last-child {
   }
   section.a .slide {
     width: 60%;
-    margin-right: -10%;
   }
   section.a .slide .aSlide {
     height: 100%;
@@ -989,9 +961,6 @@ footer > *:last-child {
     max-width: 1520px;
     margin: auto;
   }
-  header nav .logo svg {
-    width: 175px;
-  }
   header nav .menu .chaveMenu,
   header nav .menu .iconeMenu {
     display: none;
@@ -1029,10 +998,6 @@ footer > *:last-child {
   }
   section.a .texto {
     width: 50%;
-  }
-  section.a .slide {
-    width: 60%;
-    margin-right: -10%;
   }
   section.a .slide .aSlide {
     height: 100%;

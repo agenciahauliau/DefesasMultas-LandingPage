@@ -2,13 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 header {
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+  transition: 0.2 ease;
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 24px;
     .logo {
       svg {
+        transition: 0.5s ease;
         width: 100px;
       }
     }
@@ -146,12 +153,26 @@ header {
   }
 }
 
+header.topoPequeno{
+  transition: 0.2 ease;
+  background: #fffd;
+  nav {
+    padding: 6px;
+    .logo {
+      svg {
+        transition: 0.5s ease;
+        width: 75px;
+      }
+    }
+  }
+}
+
 section {
   padding: 24px 12px;
 }
 
 section.a {
-  padding-top: 12px;
+  padding-top: 152px;
 
   .container {
     flex-direction: column;
@@ -180,7 +201,7 @@ section.a {
       width: 50px;
       height: 50px;
       position: absolute;
-      bottom: -15px;
+      bottom: -50px;
       right: -10px;
       z-index: 1;
       border: 5px solid #ff0800;
@@ -284,119 +305,30 @@ section.a {
         padding: 10px 0;
         width: 100%;
         text-align: center;
-        & > a {
+         div.dot {
           display: inline-block;
-          width: 30px;
+          width: 24px;
           height: 10px;
           line-height: 30px;
           text-decoration: none;
           text-align: center;
-          background: rgba(255, 255, 255, 1);
+          background: rgba(255, 255, 255, 0.5);
           -webkit-transition: 0.3s;
           transition: 0.3s;
-          & + a {
-            background: rgba(255, 255, 255, 0.5);
+
+          &.active {
+            width: 48px;
+            background: #fff;
+            transition: 0.5 ease;
           }
           &:hover {
             background: rgba(255, 255, 255, 0.7) !important;
           }
         }
       }
-      & > s {
-        &:target {
-          & ~ .bullets {
-            & > * {
-              background: rgba(255, 255, 255, 1);
-            }
-          }
-          & ~ .prevNext {
-            & > * {
-              visibility: hidden;
-            }
-          }
-        }
-      }
-      a {
+     div.dot {
         border-radius: 10px;
-        margin: 0 3px;
-        color: rgba(0, 0, 0, 0.8);
-        text-decoration: none;
-      }
-    }
-    #s1 {
-      &:target {
-        & ~ .bullets {
-          & > *:nth-child(1) {
-            width: 50px;
-            background: rgba(255, 255, 255, 1);
-          }
-        }
-        & ~ .prevNext {
-          & > *:nth-child(1) {
-            visibility: visible;
-          }
-        }
-        & ~ .slider {
-          transform: translateX(0%);
-          -webkit-transform: translateX(0%);
-        }
-      }
-    }
-    #s2 {
-      &:target {
-        & ~ .bullets {
-          & > *:nth-child(2) {
-            width: 50px;
-            background: rgba(255, 255, 255, 1);
-          }
-        }
-        & ~ .prevNext {
-          & > *:nth-child(2) {
-            visibility: visible;
-          }
-        }
-        & ~ .slider {
-          transform: translateX(-100%);
-          -webkit-transform: translateX(-100%);
-        }
-      }
-    }
-    #s3 {
-      &:target {
-        & ~ .bullets {
-          & > *:nth-child(3) {
-            width: 50px;
-            background: rgba(255, 255, 255, 1);
-          }
-        }
-        & ~ .prevNext {
-          & > *:nth-child(3) {
-            visibility: visible;
-          }
-        }
-        & ~ .slider {
-          transform: translateX(-200%);
-          -webkit-transform: translateX(-200%);
-        }
-      }
-    }
-    #s4 {
-      &:target {
-        & ~ .bullets {
-          & > *:nth-child(4) {
-            width: 50px;
-            background: rgba(255, 255, 255, 1);
-          }
-        }
-        & ~ .prevNext {
-          & > *:nth-child(4) {
-            visibility: visible;
-          }
-        }
-        & ~ .slider {
-          transform: translateX(-300%);
-          -webkit-transform: translateX(-300%);
-        }
+        margin: 0 6px;
       }
     }
   }
@@ -708,14 +640,14 @@ footer {
         .chaveMenu ~ .itensMenu {
           display: flex;
         }
-  
+
         .itensMenu {
           position: relative;
           ul {
             flex-direction: row;
             li {
               text-align: center;
-              margin:12px;
+              margin: 12px;
               margin-right: 24px;
               a {
                 font-size: 1em;
@@ -726,6 +658,20 @@ footer {
       }
     }
   }
+
+  header.topoPequeno{
+    nav {
+      .logo {
+        svg {
+          width: 125px;
+        }
+      }
+      .itensMenu {
+        background: none;
+      }
+    }
+  }
+
   section.a {
     .container {
       flex-direction: row-reverse;
@@ -736,7 +682,6 @@ footer {
     }
     .slide {
       width: 60%;
-      margin-right: -10%;
       .aSlide {
         height: 100%;
         .slider {
@@ -746,7 +691,7 @@ footer {
         }
       }
     }
-  } 
+  }
   section.b {
     .container {
       justify-content: center;
@@ -774,7 +719,6 @@ footer {
     }
   }
 
- 
   section.c {
     .container {
       flex-direction: row;
@@ -814,7 +758,7 @@ footer {
     }
   }
   section.f {
-    padding:  38px;
+    padding: 38px;
     .texto {
       padding-right: 38px;
     }
@@ -854,12 +798,6 @@ footer {
       max-width: 1520px;
       margin: auto;
 
-      .logo {
-        svg {
-          width: 175px;
-        }
-      }
-
       .menu {
         .chaveMenu,
         .iconeMenu {
@@ -869,14 +807,14 @@ footer {
         .chaveMenu ~ .itensMenu {
           display: flex;
         }
-  
+
         .itensMenu {
           position: relative;
           ul {
             flex-direction: row;
             li {
               text-align: center;
-              margin:12px;
+              margin: 12px;
               margin-right: 24px;
               a {
                 font-size: 1em;
@@ -896,8 +834,6 @@ footer {
       width: 50%;
     }
     .slide {
-      width: 60%;
-      margin-right: -10%;
       .aSlide {
         height: 100%;
         .slider {
