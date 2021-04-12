@@ -479,6 +479,7 @@ section.b .servicos .carro {
 }
 
 section.c {
+  padding-bottom: 0;
   margin-top: 48px;
 }
 
@@ -528,6 +529,47 @@ section.c .texto > * {
   padding: 0 24px;
   margin-bottom: 12px;
   line-height: 1.5em;
+}
+
+section.ca {
+  padding-top: 0;
+}
+
+section.ca .tresColunas {
+  padding: 24px;
+}
+
+section.ca .tresColunas div {
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 10px 5px #00000009;
+          box-shadow: 0 5px 10px 5px #00000009;
+}
+
+section.ca .tresColunas div h2 {
+  margin-bottom: 12px;
+  color: #ff0800;
+}
+
+section.ca .tresColunas div:nth-child(2) {
+  position: relative;
+  -webkit-box-shadow: 0 5px 15px 5px #0000000d;
+          box-shadow: 0 5px 15px 5px #0000000d;
+  z-index: 2;
+}
+
+section.ca .tresColunas div:nth-child(2):after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  z-index: -1;
+  border: 5px solid #ff0800;
+  border-radius: 50%;
 }
 
 section.d .container {
@@ -623,10 +665,6 @@ section.d .processo .items .textoItem {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: textoItem;
-}
-
-section.d .processo .carro {
-  margin-top: -38px;
 }
 
 section.e {
@@ -873,6 +911,21 @@ footer > *:last-child {
   section.c .container .texto {
     width: 50%;
     padding: 48px;
+  }
+  section.ca .tresColunas {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.ca .tresColunas div:nth-child(2) {
+    height: 100%;
+    margin: 0 24px 24px;
+  }
+  section.ca .tresColunas div:nth-child(2) h1 {
+    margin-bottom: 36px;
   }
   section.d .titulo {
     margin: 24px 0 48px;
