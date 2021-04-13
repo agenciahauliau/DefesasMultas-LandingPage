@@ -301,6 +301,7 @@ section.a .texto p {
 
 section.a .texto p a {
   color: #fff;
+  font-size: 1.3em;
   font-weight: 900;
 }
 
@@ -740,12 +741,12 @@ section.f .texto {
   padding-right: 12px;
 }
 
-section.f .texto h4 {
+section.f .texto p {
   font-size: 1.5em;
   font-weight: 100;
 }
 
-section.f .texto p {
+section.f .texto div.whatsapp {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -757,7 +758,8 @@ section.f .texto p {
           box-shadow: 0 5px 15px 5px #ff080033;
 }
 
-section.f .texto p a {
+section.f .texto div.whatsapp a {
+  font-size: 1.3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -768,7 +770,7 @@ section.f .texto p a {
   font-weight: 900;
 }
 
-section.f .texto p svg {
+section.f .texto div.whatsapp svg {
   width: 24px;
   margin-left: 12px;
   fill: #fff;

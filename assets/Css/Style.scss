@@ -217,6 +217,7 @@ section.a {
 
       a {
         color: #fff;
+        font-size: 1.3em;
         font-weight: 900;
       }
     }
@@ -582,12 +583,12 @@ section.f {
     width: 62%;
     padding-right: 12px;
 
-    h4 {
+    p {
       font-size: 1.5em;
       font-weight: 100;
     }
 
-    p {
+    div.whatsapp {
       width: fit-content;
       padding: 12px 24px;
       margin: 24px 0;
@@ -596,6 +597,7 @@ section.f {
       box-shadow: 0 5px 15px 5px #ff080033;
 
       a {
+        font-size: 1.3em;    
         display: flex;
         align-items: center;
         color: #fff;
