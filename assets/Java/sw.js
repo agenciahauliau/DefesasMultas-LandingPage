@@ -1,36 +1,51 @@
-var CACHE_NAME = 'static-v1';
+var CACHE_VERSION = 1;
 
-self.addEventListener('install', function (event) {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
-      return cache.addAll([
-        '/index.html',
-        '/manifest.js',
-        '/assets/Css/Style.css'
-      ]);
-    })
-  )
-});
+// Identificador menor para uma versão específica do cache
+var CURRENT_CACHES = {
+  font: 'font-cache-v' + CACHE_VERSION
+};
 
-self.addEventListener('activate', function activator(event) {
+self.addEventListener('activate', function(event) {
+  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key) {
+    return CURRENT_CACHES[key];
+  });
+
+  // O worker não vai ser tratado como ativo até que a Promise se resolva.
   event.waitUntil(
-    caches.keys().then(function (keys) {
-      return Promise.all(keys
-        .filter(function (key) {
-          return key.indexOf(CACHE_NAME) !== 0;
-        })
-        .map(function (key) {
-          return caches.delete(key);
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (expectedCacheNames.indexOf(cacheName) == -1) {
+            console.log('Deletando cache expirado:', cacheName);
+
+            return caches.delete(cacheName);
+          }
         })
       );
     })
   );
 });
 
-self.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', function(event) {
+  console.log('Obtendo evento fetch para', event.request.url);
+
   event.respondWith(
-    caches.match(event.request).then(function (cachedResponse) {
-      return cachedResponse || fetch(event.request);
+
+    // Abre o objeto de cache que inicia com 'font'
+    caches.open(CURRENT_CACHES['font']).then(function(cache) {
+      return cache.match(event.request).then(function(response) {
+        if (response) {
+          console.log(' Encontrou resposta em cache:', response);
+
+          return response;
+        }
+      }).catch(function(error) {
+
+        // Trata exceções que vem de match() ou fetch().
+        console.error('  Erro na handler:', error);
+
+        throw error;
+      });
     })
   );
 });
