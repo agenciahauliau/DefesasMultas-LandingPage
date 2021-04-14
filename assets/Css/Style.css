@@ -93,17 +93,26 @@ header nav .menu .iconeMenu .line {
   stroke-linejoin: round;
   -webkit-transform-origin: 50%;
           transform-origin: 50%;
-  -webkit-transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
-  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
-  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
-  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms, -webkit-transform 500ms 200ms;
+  -webkit-transition: stroke-dasharray 500ms 200ms,
+ stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
+  transition: stroke-dasharray 500ms 200ms,
+ stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
+  transition: stroke-dasharray 500ms 200ms,
+ stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+  transition: stroke-dasharray 500ms 200ms,
+ stroke-dashoffset 500ms 200ms, transform 500ms 200ms,
+ -webkit-transform 500ms 200ms;
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate .line {
-  -webkit-transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, -webkit-transform 500ms;
-  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, -webkit-transform 500ms;
-  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
-  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms, -webkit-transform 500ms;
+  -webkit-transition: stroke-dasharray 500ms, stroke-dashoffset 500ms,
+ -webkit-transform 500ms;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms,
+ -webkit-transform 500ms;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms,
+ transform 500ms;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms,
+ transform 500ms, -webkit-transform 500ms;
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate .x {
@@ -630,7 +639,8 @@ section.d .processo .items {
   display: grid;
   -ms-grid-columns: 30% 70%;
       grid-template-columns: 30% 70%;
-      grid-template-areas: "numero tituloItem" "numero textoItem";
+      grid-template-areas: "numero tituloItem"
+ "numero textoItem";
   margin: 12px 0;
   padding: 12px;
   border-radius: 10px;
