@@ -247,6 +247,10 @@ section {
   padding: 24px 12px;
 }
 
+.link {
+  padding-top: 72px;
+}
+
 section.a {
   padding-top: 152px;
 }
