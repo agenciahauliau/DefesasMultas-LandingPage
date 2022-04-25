@@ -6,7 +6,7 @@ header {
   height: fit-content;
   position: fixed;
   z-index: 10;
-  background: #fff;
+  background: #000;
   transition: 0.2 ease;
   nav {
     display: flex;
@@ -135,7 +135,7 @@ header {
         position: fixed;
         top: 0;
         left: 0;
-        background: #fff;
+        background: #000;
         z-index: 10;
         ul {
           width: 100%;
@@ -159,7 +159,7 @@ header {
 
 header.topoPequeno {
   transition: 0.2 ease;
-  background: #fffd;
+  background: #000d;
   nav {
     padding: 6px;
     .logo {
@@ -180,13 +180,14 @@ div.link {
 }
 
 section.a {
-  padding-top: 152px;
+  padding-top: 178px;
 
   .container {
     flex-direction: column;
   }
   .texto {
     margin-top: 38px;
+    padding-right: 24px;
     h1:after {
       content: "";
       width: 25px;
@@ -195,35 +196,47 @@ section.a {
       top: -20px;
       left: -15px;
       z-index: -1;
-      border: 5px solid #ff0800;
+      border: 5px solid #9f6300;
       border-radius: 50%;
     }
     h1 {
       padding: 12px 24px 0;
       margin-bottom: 24px;
       position: relative;
-      color: #ff0800;
+      color: #fff;
     }
 
     h2 {
       padding: 0px 24px;
       margin-bottom: 38px;
       font-weight: 100;
+      color: #fff9;
     }
 
-    p {
-      width: fit-content;
-      padding: 12px 24px;
-      margin: 24px;
-      background: #ff0800;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px 5px #ff080033;
+    .buttons {
+      display: flex;
+      p {
+        width: fit-content;
+        padding: 12px 24px;
+        margin: 12px;
+        background: #9f6300;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px 5px #9f630033;
 
-      a {
-        color: #fff;
-        font-size: 1.3em;
-        font-weight: 900;
+        a {
+          font-size: 1.3em;
+          font-weight: 400;
+          letter-spacing: 0.75px;
+        }
       }
+      .whatsapp {
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: #fff;
+        }
+      }
+      
     }
   }
 
@@ -235,7 +248,7 @@ section.a {
     top: -25px;
     right: -25px;
     z-index: -1;
-    border: 5px solid #ff0800;
+    border: 5px solid #9f6300;
     border-radius: 50%;
   }
 
@@ -261,7 +274,7 @@ section.a {
           width: 100%;
         }
       }
-      .prevNext  {
+      .prevNext {
         position: absolute;
         z-index: 1;
         top: 50%;
@@ -316,7 +329,7 @@ section.a {
 
           &.active {
             width: 48px;
-            background: #fff;
+            background: #9f6300;
             transition: 0.5 ease;
           }
           &:hover {
@@ -332,7 +345,7 @@ section.a {
   }
 }
 section.b {
-  background: linear-gradient(35deg, #b90707, #ff0800);
+  background: linear-gradient(35deg, #cfb180, #9f6300);
   .servicos {
     display: flex;
     flex-direction: column;
@@ -349,7 +362,7 @@ section.b {
       padding: 24px;
       margin: 12px 24px;
       border-radius: 10px;
-      background: #fff;
+      background: #222;
       box-shadow: 0 5px 15px 2px #fff3;
 
       .imagem {
@@ -358,6 +371,7 @@ section.b {
         padding: 12px;
         svg {
           width: 100%;
+          fill: #9f6300;
         }
       }
 
@@ -388,7 +402,7 @@ section.c {
     top: -20px;
     right: -5px;
     z-index: -1;
-    border: 5px solid #ff0800;
+    border: 5px solid #9f6300;
     border-radius: 50%;
   }
   .titulo {
@@ -426,18 +440,22 @@ section.c {
 section.ca {
   padding-top: 0;
   .tresColunas {
-    padding: 24px;
+    padding: 24px 0;
 
     div {
+      width: 100%;
       padding: 24px;
       margin-bottom: 24px;
       border-radius: 10px;
-      background: #fff;
+      background: #222;
       box-shadow: 0 5px 10px 5px #00000009;
 
       h2 {
         margin-bottom: 12px;
-        color: #ff0800;
+        color: #9f6300;
+      }
+      p {
+        line-height: 1.3em;
       }
     }
 
@@ -455,7 +473,7 @@ section.ca {
       top: -10px;
       right: -5px;
       z-index: -1;
-      border: 5px solid #ff0800;
+      border: 5px solid #9f6300;
       border-radius: 50%;
     }
   }
@@ -476,7 +494,7 @@ section.d {
       top: -45px;
       left: -25px;
       z-index: -1;
-      border: 5px solid #ff0800;
+      border: 5px solid #9f6300;
       border-radius: 50%;
     }
     h1 {
@@ -502,7 +520,8 @@ section.d {
       margin: 12px 0;
       padding: 12px;
       border-radius: 10px;
-      box-shadow: 0 5px 5px #ff080011;
+      background: #101010;
+      box-shadow: 0 5px 5px #9f630011;
 
       .numero {
         grid-area: numero;
@@ -510,7 +529,6 @@ section.d {
         display: flex;
         align-items: center;
         padding: 6px;
-        color: #ff0800;
 
         p {
           font-family: Bebas Neue;
@@ -519,17 +537,20 @@ section.d {
       }
       .tituloItem {
         grid-area: tituloItem;
-        margin-bottom: 6px;
+        margin-bottom: 12px;
       }
       .textoItem {
         grid-area: textoItem;
+        p {
+          line-height: 1.3em;
+        }
       }
     }
   }
 }
 
 section.e {
-  background: linear-gradient(35deg, #b90707, #ff0800);
+  background: linear-gradient(35deg, #cfb180, #9f6300);
   .imagem {
     display: none;
   }
@@ -595,9 +616,9 @@ section.f {
       width: fit-content;
       padding: 12px 24px;
       margin: 24px 0;
-      background: #ff0800;
+      background: #9f6300;
       border-radius: 10px;
-      box-shadow: 0 5px 15px 5px #ff080033;
+      box-shadow: 0 5px 15px 5px #9f630033;
 
       a {
         font-size: 1.3em;
@@ -983,6 +1004,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-top: 24px;
+    background: #000;
 
     > * {
       width: calc(100% / 3);
