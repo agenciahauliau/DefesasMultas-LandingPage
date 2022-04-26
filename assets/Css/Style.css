@@ -29,6 +29,7 @@ header nav .logo svg {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   width: 100px;
+  fill: #fff;
 }
 
 header nav .menu {
@@ -309,12 +310,17 @@ section.a .texto .buttons p {
   border-radius: 10px;
   -webkit-box-shadow: 0 5px 15px 5px #9f630033;
           box-shadow: 0 5px 15px 5px #9f630033;
+  cursor: pointer;
 }
 
 section.a .texto .buttons p a {
   font-size: 1.3em;
   font-weight: 400;
   letter-spacing: 0.75px;
+}
+
+section.a .texto .buttons .whatsapp {
+  cursor: pointer;
 }
 
 section.a .texto .buttons .whatsapp svg {
@@ -490,11 +496,11 @@ section.b .servicos .itens .imagem {
 
 section.b .servicos .itens .imagem svg {
   width: 100%;
-  fill: #9f6300;
+  fill: #fff9;
 }
 
 section.b .servicos .itens h3 {
-  font-weight: 100;
+  font-weight: 400;
 }
 
 section.b .servicos .carro {
@@ -681,6 +687,7 @@ section.d .processo .items .numero {
 section.d .processo .items .numero p {
   font-family: Bebas Neue;
   font-size: 5em;
+  color: #fff9;
 }
 
 section.d .processo .items .tituloItem {
@@ -747,15 +754,19 @@ section.e .formulario form button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  min-width: 144px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding: 12px 24px;
+  padding: 24px;
   margin: 24px 0 0;
-  background: #fff;
+  background: #000;
+  font-size: 18px;
   font-weight: 900;
+  color: #fff;
   border-radius: 10px;
   -webkit-box-shadow: 0 7px 15px 5px #fff3;
           box-shadow: 0 7px 15px 5px #fff3;
+  cursor: pointer;
 }
 
 section.f .container {
@@ -823,12 +834,13 @@ footer {
 
 footer .logo svg {
   width: 125px;
+  fill: #fff;
 }
 
 footer > * {
   padding-bottom: 12px;
   margin-bottom: 12px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff3;
 }
 
 footer > * p,
@@ -844,7 +856,6 @@ footer > *:last-child {
 
 @media screen and (min-width: 650px) {
   header nav {
-    max-width: 1520px;
     margin: auto;
   }
   header nav .logo svg {
@@ -1028,13 +1039,12 @@ footer > *:last-child {
   footer > *:last-child {
     width: 100%;
     padding-top: 12px;
-    border-top: 1px solid #fff;
   }
 }
 
 @media screen and (min-width: 820px) {
   header nav {
-    max-width: 1520px;
+    max-width: 1280px;
     margin: auto;
   }
   header nav .menu .chaveMenu,
@@ -1197,7 +1207,7 @@ footer > *:last-child {
   footer > *:last-child {
     width: 100%;
     padding-top: 12px;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #fff3;
   }
 }
 /*# sourceMappingURL=Style.css.map */
