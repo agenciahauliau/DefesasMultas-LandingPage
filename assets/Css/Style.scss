@@ -389,7 +389,6 @@ section.b {
 }
 
 section.c {
-  padding-bottom: 0;
   margin-top: 48px;
 
   .container {
@@ -440,7 +439,6 @@ section.c {
 }
 
 section.ca {
-  padding-top: 0;
   .tresColunas {
     padding: 24px 0;
 
@@ -449,7 +447,7 @@ section.ca {
       padding: 24px;
       margin-bottom: 24px;
       border-radius: 10px;
-      background: #222;
+      background: #050505;
       box-shadow: 0 5px 10px 5px #00000009;
 
       h2 {
@@ -514,6 +512,7 @@ section.d {
 
     .items {
       width: 100%;
+      min-height: 143.4px;
       display: grid;
       grid-template-columns: 30% 70%;
       grid-template-areas:
@@ -522,8 +521,8 @@ section.d {
       margin: 12px 0;
       padding: 12px;
       border-radius: 10px;
-      background: #101010;
-      box-shadow: 0 5px 5px #9f630011;
+      background: #050505;
+      box-shadow: 0 5px 5px #00000009;
 
       .numero {
         grid-area: numero;
@@ -540,12 +539,13 @@ section.d {
       }
       .tituloItem {
         grid-area: tituloItem;
-        margin-bottom: 12px;
+        margin-bottom: 21px;
       }
       .textoItem {
         grid-area: textoItem;
         p {
           line-height: 1.3em;
+          color: #fffe;
         }
       }
     }
@@ -680,6 +680,43 @@ footer {
     padding-bottom: 0;
     margin-bottom: 12px;
     border-bottom: none;
+  }
+}
+
+.cookies {
+  width: 100%;
+  display: flex;
+  padding: 48px 36px;
+  position: fixed;
+  bottom: 0;
+  z-index: -100;
+  background: #000e;
+  opacity: 0;
+  transition: 0.2s ease-out;
+
+  p {
+    max-width: 1280px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.3em;
+  }
+  button {
+    width: fit-content;
+    padding: 12px 24px;
+    margin: 12px;
+    background: #9f6300;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 5px #9f630033;
+    font-weight: 200;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
+
+  &.ativo{
+    z-index: 100;
+    opacity: 1;
   }
 }
 

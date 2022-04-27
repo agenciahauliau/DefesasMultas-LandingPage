@@ -25,22 +25,6 @@
     <link rel="icon" type="image/png" sizes="16x16 48x48 72x72 96x96 128x128 192x192 256x256 512x512"
         href="assets/Imagem/defesasDeMultas.svg">
     <script>if ("serviceWorker" in navigator) { navigator.serviceWorker.register("assets/Java/sw.js").then(function () { console.log("service worker registered"); }).catch(function () { console.warn("service worker failed"); }); }</script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-462F1H2RKB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-462F1H2RKB');
-    </script>
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "bnj0psbbe4");
-    </script>
     <style>
         * {
             margin: 0;
@@ -274,26 +258,6 @@
                     <div class="slider" data-component="slider">
                         <div> <img width="626px" height="417px" src="assets/Imagem/multas-de-transito.webp"
                                 alt="Ajuda com multas de trânsito" title="Ajuda com multas de trânsito" /> </div>
-                    </div>
-                    <div class="prevNext">
-                        <div> <a class="prev">
-                                <?xml version="1.0" encoding="UTF-8"?> <svg enable-background="new 0 0 443.52 443.52"
-                                    version="1.1" viewBox="0 0 443.52 443.52" xml:space="preserve"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m143.49 221.86l192.73-192.73c6.663-6.664 6.663-17.468 0-24.132-6.665-6.662-17.468-6.662-24.132 0l-204.8 204.8c-6.662 6.664-6.662 17.468 0 24.132l204.8 204.8c6.78 6.548 17.584 6.36 24.132-0.42 6.387-6.614 6.387-17.099 0-23.712l-192.73-192.73z" />
-                                </svg>
-                            </a><a class="next"> <svg enable-background="new 0 0 443.52 443.52" version="1.1"
-                                    viewBox="0 0 443.52 443.52" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m336.23 209.59l-204.8-204.8c-6.78-6.548-17.584-6.36-24.132 0.42-6.388 6.614-6.388 17.099 0 23.712l192.73 192.73-192.73 192.73c-6.663 6.664-6.663 17.468 0 24.132 6.665 6.663 17.468 6.663 24.132 0l204.8-204.8c6.663-6.665 6.663-17.468 0-24.132z" />
-                                </svg> </a> </div>
-                    </div>
-                    <div class="bullets">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
                     </div>
                 </div>
             </div>
@@ -736,6 +700,49 @@
             <p> feito por <a href="https://hi4u.me"><b>Haul Iau</b></a> </p>
         </div>
     </footer>
+    <div class="cookies">
+        <p>Esse website usa cookies que ajudam o website a funcionar e também rastrear como você interage com ele. Você
+            pode também gerenciar as suas preferências de cookies individuais nas Configurações do seu navegador. Para
+            saber mais, leia a nossa política de privacidade e cookies </p><button class="cookieAccept">Aceitar</button>
+    </div>
+    <script>
+        const cookieContainer = document.querySelector(".cookies");
+        const cookieAccept = document.querySelector(".cookieAccept");
+        if (!localStorage.getItem("cookieAccept-CostaCorreia")) {
+            cookieContainer.classList.add("ativo");
+        } else {
+            activateTracking();
+        }
+        function activateTracking() {
+            //google
+            let g = document.createElement("script");
+            g.setAttribute(
+                "src",
+                "https://www.googletagmanager.com/gtag/js?id=G-462F1H2RKB"
+            );
+            document.head.appendChild(g);
+            //google codigo    
+            let gt = document.createElement("script");
+            (gt.text = `window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-462F1H2RKB');`),
+                document.head.appendChild(gt);
+            //clarity codigo    
+            let c = document.createElement("script");
+            (c.text = `(function (c, l, a, r, i, t, y) {
+                    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+                    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+                    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+                })(window, document, "clarity", "script", "bnj0psbbe4");`),
+                document.head.appendChild(c);
+        }
+        cookieAccept.addEventListener("click", () => {
+            localStorage.setItem("cookieAccept-CostaCorreia", "true");
+            activateTracking();
+            cookieContainer.classList.remove("ativo");
+        });
+    </script>
 </body>
 <script>
     window.addEventListener("scroll", (event) => {
@@ -786,7 +793,7 @@
         myHeaders.append("Content-Type", "application/json");
         let raw = JSON.stringify({
             de: `site@${url}`,
-            para: ["contato@defesasdemultas.com.br", "mkt@hi4u.me"],
+            para: ["contato@defesasdemultas.com.br"],
             assunto: `Solcilitação de contato pelo formulário do site ${url}`,
             mensagem: `Novo contato do site\n\nNome: ${document.getElementById("nome").value
                 }\n\nEmail: ${document.getElementById("email").value}\n\nTelefone: ${document.getElementById("telefone").value

@@ -509,7 +509,6 @@ section.b .servicos .carro {
 }
 
 section.c {
-  padding-bottom: 0;
   margin-top: 48px;
 }
 
@@ -561,10 +560,6 @@ section.c .texto > * {
   line-height: 1.5em;
 }
 
-section.ca {
-  padding-top: 0;
-}
-
 section.ca .tresColunas {
   padding: 24px 0;
 }
@@ -574,7 +569,7 @@ section.ca .tresColunas div {
   padding: 24px;
   margin-bottom: 24px;
   border-radius: 10px;
-  background: #222;
+  background: #050505;
   -webkit-box-shadow: 0 5px 10px 5px #00000009;
           box-shadow: 0 5px 10px 5px #00000009;
 }
@@ -656,6 +651,7 @@ section.d .processo {
 
 section.d .processo .items {
   width: 100%;
+  min-height: 143.4px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 30% 70%;
@@ -664,9 +660,9 @@ section.d .processo .items {
   margin: 12px 0;
   padding: 12px;
   border-radius: 10px;
-  background: #101010;
-  -webkit-box-shadow: 0 5px 5px #9f630011;
-          box-shadow: 0 5px 5px #9f630011;
+  background: #050505;
+  -webkit-box-shadow: 0 5px 5px #00000009;
+          box-shadow: 0 5px 5px #00000009;
 }
 
 section.d .processo .items .numero {
@@ -694,7 +690,7 @@ section.d .processo .items .tituloItem {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: tituloItem;
-  margin-bottom: 12px;
+  margin-bottom: 21px;
 }
 
 section.d .processo .items .textoItem {
@@ -705,6 +701,7 @@ section.d .processo .items .textoItem {
 
 section.d .processo .items .textoItem p {
   line-height: 1.3em;
+  color: #fffe;
 }
 
 section.e {
@@ -852,6 +849,50 @@ footer > *:last-child {
   padding-bottom: 0;
   margin-bottom: 12px;
   border-bottom: none;
+}
+
+.cookies {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 48px 36px;
+  position: fixed;
+  bottom: 0;
+  z-index: -100;
+  background: #000e;
+  opacity: 0;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.cookies p {
+  max-width: 1280px;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.3em;
+}
+
+.cookies button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 24px;
+  margin: 12px;
+  background: #9f6300;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 15px 5px #9f630033;
+          box-shadow: 0 5px 15px 5px #9f630033;
+  font-weight: 200;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.cookies.ativo {
+  z-index: 100;
+  opacity: 1;
 }
 
 @media screen and (min-width: 650px) {
