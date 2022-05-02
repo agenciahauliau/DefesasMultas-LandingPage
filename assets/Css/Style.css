@@ -295,21 +295,25 @@ section.a .texto h2 {
 }
 
 section.a .texto .buttons {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 24px;
+  background: #9f6300;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 15px 5px #9f630033;
+          box-shadow: 0 5px 15px 5px #9f630033;
 }
 
 section.a .texto .buttons p {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 12px 24px;
+  padding: 6px 12px;
   margin: 12px;
-  background: #9f6300;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 5px 15px 5px #9f630033;
-          box-shadow: 0 5px 15px 5px #9f630033;
   cursor: pointer;
 }
 
@@ -999,6 +1003,9 @@ footer > *:last-child {
     width: 50%;
     padding: 48px;
   }
+  section.c .container .texto p {
+    font-size: 1.5em;
+  }
   section.ca .tresColunas {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -1207,6 +1214,7 @@ footer > *:last-child {
     bottom: -24px;
   }
   section.e .formulario {
+    width: 60%;
     padding-left: 38px;
   }
   section.f .texto {
